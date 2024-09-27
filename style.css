@@ -2,8 +2,8 @@
 
 :root {
     --bg-color: #F5F5F5; /* Fundo branco fosco */
-    --text-color: #0c0c0c; /* Texto cinza suave */
-    --highlight-color: #290766; /* Rosa pastel claro */
+    --text-color: #5c5c5c; /* Texto cinza suave */
+    --highlight-color: #050505; /* Rosa pastel claro */
     --highlight-hover: #4238c5; /* Rosa pastel mais forte para hover */
 }
 
