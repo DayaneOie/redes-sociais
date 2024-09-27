@@ -1,15 +1,15 @@
 import { getCSS, tickConfig } from "./common.js";
 
-async function quantidadeUsuariosPorRede() {
+async function quantidadeUsuariosPorTipoDeEstilo() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
     const res = await fetch(url);
     const dados = await res.json();
-    const nomeDasRedes = Object.keys(dados);
+    const nomeDosEstilos = Object.keys(dados);
     const quantidadeDeUsuarios = Object.values(dados);
 
     const data = [
         {
-            x: nomeDasRedes, 
+            x: nomeDosEstilos, 
             y: quantidadeDeUsuarios, 
             type: 'bar',
             marker: {
@@ -23,7 +23,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Redes sociais com mais usuários entre alunos',
+            text: 'Estilos com mais usuários entre alunos',
             font: {
                 color: getCSS('--highlight-color'),
                 size: 30,
@@ -33,7 +33,7 @@ async function quantidadeUsuariosPorRede() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome das redes',
+                text: 'Nome dos estilos',
                 font: {
                     color: getCSS('--highlight-color') // Espaço removido
                 }
