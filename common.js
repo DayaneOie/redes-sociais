@@ -1,6 +1,6 @@
 const getCSS = (variavel) => {
-    const bodyStyles = getComputedStyle(document.body);
-    return bodyStyles.getPropertyValue(variavel).trim(); // Remove espaços em branco
+    const bodyStyles = getComputedStyle(document.body)
+    return bodyStyles.getPropertyValue(variavel)
 }
 
 const tickConfig = {
@@ -9,4 +9,4 @@ const tickConfig = {
     color: getCSS('--primary-color')
 }
 
-export { getCSS, tickConfig };
+export {getCSS, tickConfig}
