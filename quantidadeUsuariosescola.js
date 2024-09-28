@@ -1,6 +1,6 @@
 import { getCSS, tickConfig } from "./common.js";
 
-async function quantidadeUsuariosPorRede() {
+async function quantidadeUsuariosPorEstilo() {
     // Dados fictícios dos usuários na escola, incluindo YouTube
     const dadosEscola = {
         "Artística": 500,
@@ -13,7 +13,7 @@ async function quantidadeUsuariosPorRede() {
 
     // Ordenar os dados pela quantidade de usuários em ordem decrescente
     const ordenados = Object.entries(dadosEscola).sort((a, b) => b[1] - a[1]);
-    const nomeDasRedes = ordenados.map(item => item[0]);
+    const nomeDosEstilos = ordenados.map(item => item[0]);
     const quantidadeDeUsuarios = ordenados.map(item => item[1]);
 
     // Adicionar texto explicativo
@@ -22,9 +22,9 @@ async function quantidadeUsuariosPorRede() {
     textoExplicativo.innerHTML = `
        
            Você sabia que a nossa escola possui aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.950 alunos?</span>
- Aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.920 estudantes</span> estão conectados em alguma rede social e, em média, passam cerca de <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">4 horas</span> por dia nessas plataformas. Isso significa que uma grande parte dos alunos está ativa nas redes sociais.
+ Aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.920 estudantes</span> estão usando maquiagem e, em média, passam cerca de <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">4 horas</span> por dia nas plataformas procurando sobre. Isso significa que uma grande parte dos alunos está ativa nas redes sociais por conta dos estilos.
         <br><br>
-        Abaixo, você pode ver o gráfico que mostra as redes sociais mais utilizadas entre nossos alunos.
+        Abaixo, você pode ver o gráfico que mostra as maquiagens mais utilizadas entre nossos alunos.
     `;
 
     const container = document.getElementById('graficos-container');
