@@ -1,6 +1,6 @@
 import { getCSS, tickConfig } from "./common.js";
 
-async function quantidadeUsuariosPorTipoDeEstilo() {
+async function quantidadeUsuariosPorEstilo() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
     const res = await fetch(url);
     const dados = await res.json();
@@ -57,4 +57,4 @@ async function quantidadeUsuariosPorTipoDeEstilo() {
     Plotly.newPlot(grafico, data, layout); // Correção aqui
 }
 
-quantidadeUsuariosPorRede();
+quantidadeUsuariosPorEstilo();
