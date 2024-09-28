@@ -3,12 +3,12 @@ import { getCSS, tickConfig } from "./common.js";
 async function quantidadeUsuariosPorRede() {
     // Dados fictícios dos usuários na escola, incluindo YouTube
     const dadosEscola = {
-        "Facebook": 500,
-        "Instagram": 1800,
-        "Twitter": 900,
-        "TikTok": 1400,
-        "WhatsApp": 1900,
-        "YouTube": 1200,
+        "Artística": 500,
+        "Clean Girl": 1800,
+        "Colorida": 900,
+        "Clássica": 1400,
+        "Natural": 1900,
+        "Editorial": 1200,
      }
 
     // Ordenar os dados pela quantidade de usuários em ordem decrescente
@@ -32,7 +32,7 @@ async function quantidadeUsuariosPorRede() {
 
     const data = [
         {
-            x: nomeDasRedes, 
+            x: nomeDosEstilos, 
             y: quantidadeDeUsuarios, 
             type: 'bar',
             marker: {
@@ -45,7 +45,7 @@ async function quantidadeUsuariosPorRede() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Redes sociais com mais usuários entre alunos',
+            text: 'Estilos com mais usuários entre alunos',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -56,7 +56,7 @@ async function quantidadeUsuariosPorRede() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome das redes',
+                text: 'Nome dos estilos',
                 font: {
                     color: getCSS('--secondary-color')
                 }
@@ -80,4 +80,4 @@ async function quantidadeUsuariosPorRede() {
     Plotly.newPlot(grafico, data, layout);
 }
 
-quantidadeUsuariosPorRede();
+quantidadeUsuariosPorEstilos();
