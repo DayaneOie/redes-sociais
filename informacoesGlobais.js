@@ -1,3 +1,5 @@
+
+
 const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
 async function vizualizarInformacoesGlobais() {
@@ -12,9 +14,9 @@ async function vizualizarInformacoesGlobais() {
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
     paragrafo.innerHTML = `
-    Você sabia que a população mundial é de cerca de <span>${pessoasNoMundo} bilhões</span> de indivíduos? Dentre eles, aproximadamente <span>${pessoasConectadas} bilhões</span> estão ativos em vários estilos de maquiagem. <br>
-    Em média, cada pessoa passa cerca de <span>${horas} horas</span> e <span>${minutos} minutos</span> diariamente se maquiando e postando nas redes.<br>
-    Isso equivale a aproximadamente <span>${porcentagemConectada}%</span> da população global conectada às redes sociais por conta da maquiagem.
+    Você sabia que a população mundial é de cerca de <span>${pessoasNoMundo} bilhões</span> de indivíduos? Dentre eles, aproximadamente <span>${pessoasConectadas} bilhões</span> estão ativos em redes sociais. <br>
+    Em média, cada pessoa passa cerca de <span>${horas} horas</span> e <span>${minutos} minutos</span> diariamente navegando nessas plataformas.<br>
+    Isso equivale a aproximadamente <span>${porcentagemConectada}%</span> da população global conectada às redes sociais.
 `;
 
 
