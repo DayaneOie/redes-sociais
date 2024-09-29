@@ -4,10 +4,10 @@ async function quantidadeUsuariosPorRede() {
     // Dados fictícios dos usuários na escola, incluindo YouTube
     const dadosEscola = {
         "Facebook": 500,
-        "Instagram": 1800,
-        "Twitter": 900,
-        "TikTok": 1400,
-        "WhatsApp": 1900,
+        "Instagram": 2000,
+        "Twitter": 1000,
+        "TikTok": 1900,
+        "WhatsApp": 2500,
         "YouTube": 1200,
      }
 
