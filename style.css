@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --bg-color: #F5F5F5; /* Fundo branco fosco */
+    --bg-color: #0e0b0b; /* Fundo branco fosco */
     --text-color: #2e207c; /* Texto cinza suave */
     --highlight-color: #310542; /* Rosa pastel claro */
     --highlight-hover: #000000; /* Rosa pastel mais forte para hover */
