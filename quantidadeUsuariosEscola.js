@@ -1,19 +1,19 @@
 import { getCSS, tickConfig } from "./common.js";
 
-async function quantidadeUsuariosPorEstilo() {
+async function quantidadeUsuariosPorRede() {
     // Dados fictícios dos usuários na escola, incluindo YouTube
     const dadosEscola = {
-        "Artística": 500,
-        "Clean Girl": 1800,
-        "Colorida": 900,
-        "Clássica": 1400,
-        "Natural": 1900,
-        "Editorial": 1200,
+        "Facebook": 500,
+        "Instagram": 1800,
+        "Twitter": 900,
+        "TikTok": 1400,
+        "WhatsApp": 1900,
+        "YouTube": 1200,
      }
 
     // Ordenar os dados pela quantidade de usuários em ordem decrescente
     const ordenados = Object.entries(dadosEscola).sort((a, b) => b[1] - a[1]);
-    const nomeDosEstilos = ordenados.map(item => item[0]);
+    const nomeDasRedes = ordenados.map(item => item[0]);
     const quantidadeDeUsuarios = ordenados.map(item => item[1]);
 
     // Adicionar texto explicativo
@@ -22,9 +22,9 @@ async function quantidadeUsuariosPorEstilo() {
     textoExplicativo.innerHTML = `
        
            Você sabia que a nossa escola possui aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.950 alunos?</span>
- Aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.920 estudantes</span> estão usando maquiagem e, em média, passam cerca de <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">4 horas</span> por dia nas plataformas procurando sobre. Isso significa que uma grande parte dos alunos está ativa nas redes sociais por conta dos estilos.
+ Aproximadamente <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">1.920 estudantes</span> estão conectados em alguma rede social e, em média, passam cerca de <span style="font-weight: bold; color: ${getCSS('--secondary-color')}">4 horas</span> por dia nessas plataformas. Isso significa que uma grande parte dos alunos está ativa nas redes sociais.
         <br><br>
-        Abaixo, você pode ver o gráfico que mostra as maquiagens mais utilizadas entre nossos alunos.
+        Abaixo, você pode ver o gráfico que mostra as redes sociais mais utilizadas entre nossos alunos.
     `;
 
     const container = document.getElementById('graficos-container');
@@ -32,7 +32,7 @@ async function quantidadeUsuariosPorEstilo() {
 
     const data = [
         {
-            x: nomeDosEstilos, 
+            x: nomeDasRedes, 
             y: quantidadeDeUsuarios, 
             type: 'bar',
             marker: {
@@ -45,7 +45,7 @@ async function quantidadeUsuariosPorEstilo() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Estilos com mais usuários entre alunos',
+            text: 'Redes sociais com mais usuários entre alunos',
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -56,7 +56,7 @@ async function quantidadeUsuariosPorEstilo() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome dos estilos',
+                text: 'Nome das redes',
                 font: {
                     color: getCSS('--secondary-color')
                 }
@@ -80,4 +80,4 @@ async function quantidadeUsuariosPorEstilo() {
     Plotly.newPlot(grafico, data, layout);
 }
 
-quantidadeUsuariosPorEstilos();
+quantidadeUsuariosPorRede();
