@@ -2,9 +2,9 @@
 
 :root {
     --bg-color: #F5F5F5; /* Fundo branco fosco */
-    --text-color: #5c5c5c; /* Texto cinza suave */
-    --highlight-color: #050505; /* Rosa pastel claro */
-    --highlight-hover: #4238c5; /* Rosa pastel mais forte para hover */
+    --text-color: #2e207c; /* Texto cinza suave */
+    --highlight-color: #310542; /* Rosa pastel claro */
+    --highlight-hover: #000000; /* Rosa pastel mais forte para hover */
 }
 
 .highlight {
