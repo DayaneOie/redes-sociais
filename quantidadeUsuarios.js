@@ -1,15 +1,15 @@
 import { getCSS, tickConfig } from "./common.js";
 
-async function quantidadeUsuariosPorEstilo() {
+async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
     const res = await fetch(url);
     const dados = await res.json();
-    const nomeDosEstilos = Object.keys(dados);
+    const nomeDasRedes = Object.keys(dados);
     const quantidadeDeUsuarios = Object.values(dados);
 
     const data = [
         {
-            x: nomeDosEstilos, 
+            x: nomeDasRedes, 
             y: quantidadeDeUsuarios, 
             type: 'bar',
             marker: {
@@ -23,7 +23,7 @@ async function quantidadeUsuariosPorEstilo() {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Estilos com mais usuários entre alunos',
+            text: 'Redes sociais com mais usuários entre alunos',
             font: {
                 color: getCSS('--highlight-color'),
                 size: 30,
@@ -33,7 +33,7 @@ async function quantidadeUsuariosPorEstilo() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome dos estilos',
+                text: 'Nome das redes',
                 font: {
                     color: getCSS('--highlight-color') // Espaço removido
                 }
@@ -57,4 +57,4 @@ async function quantidadeUsuariosPorEstilo() {
     Plotly.newPlot(grafico, data, layout); // Correção aqui
 }
 
-quantidadeUsuariosPorEstilo();
+quantidadeUsuariosPorRede();
